@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public float moveSpeed = 0.005f;
+    public float moveSpeed = 2f;
     public float jumpPower = 300f;
 
     public GameManager gameManager;
     private void Update()
     {
-        transform.Translate(Vector3.right * moveSpeed);
+        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
     }
 
     public void Jump()
